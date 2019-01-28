@@ -15,8 +15,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
-    return true
+    /////////////////Set up View Controllers/////////////////
+    let BSVC  = BestSellersViewController()
+    let FVC = FavoritesViewController()
+    let SVC = SettingViewController()
+    /////////////////Set Navigation to start at/////////////////
+    let nav = UINavigationController.init(rootViewController: BSVC)
+    /////////////////Set up Tab View Controller/////////////////
+    let tab = UITabBarController()
+    /////////////////Connect ViewControllers to tab/////////////////
+    //nav.title = "Best Sellers"
+    //FVC.title = "Favorites"
+    //SVC.title = "Settings"
+    nav.tabBarItem = UITabBarItem(title: "Best Sellers", image: UIImage.init(named: "icons8-book-shelf-25"), selectedImage: UIImage.init(named: "icons8-book-shelf-25"))
+    FVC.tabBarItem = UITabBarItem(title: "Favorites", image: UIImage.init(named: "icons8-bookmark-filled-25"), selectedImage: UIImage.init(named: "icons8-bookmark-filled-25"))
+    SVC.tabBarItem = UITabBarItem(title: "Settings", image: UIImage.init(named: "icons8-services-filled-25"), selectedImage: UIImage.init(named: "icons8-services-filled-25"))
+    
+//    FVC.tabBarController?.tabBar.items?[0].image = UIImage.init(named: "icons8-bookmark-filled-25")
+//    tab.tabBar.items?[0].image = UIImage.init(named: "icons8-bookmark-filled-25")
+        tab.viewControllers = [nav,FVC,SVC]
+    
+    /////////////////Window Set UP/////////////////
+    window = UIWindow.init(frame: UIScreen.main.bounds)
+    window?.rootViewController = tab
+    window?.makeKeyAndVisible()
+        return true
   }
 
   func applicationWillResignActive(_ application: UIApplication) {
