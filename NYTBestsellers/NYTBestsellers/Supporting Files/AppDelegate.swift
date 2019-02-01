@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let BSVC  = BestSellersViewController()
     let FVC = FavoritesViewController()
     let SVC = SettingViewController()
+    let DVC = DetailViewController()
     /////////////////Set Navigation to start at/////////////////
     let nav = UINavigationController.init(rootViewController: BSVC)
     /////////////////Set up Tab View Controller/////////////////
@@ -31,8 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     FVC.tabBarItem = UITabBarItem(title: "Favorites", image: UIImage.init(named: "icons8-bookmark-filled-25"), selectedImage: UIImage.init(named: "icons8-bookmark-filled-25"))
     SVC.tabBarItem = UITabBarItem(title: "Settings", image: UIImage.init(named: "icons8-services-filled-25"), selectedImage: UIImage.init(named: "icons8-services-filled-25"))
     
-//    FVC.tabBarController?.tabBar.items?[0].image = UIImage.init(named: "icons8-bookmark-filled-25")
-//    tab.tabBar.items?[0].image = UIImage.init(named: "icons8-bookmark-filled-25")
         tab.viewControllers = [nav,FVC,SVC]
     
     /////////////////Window Set UP/////////////////

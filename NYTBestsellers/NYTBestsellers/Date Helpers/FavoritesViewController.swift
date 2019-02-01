@@ -13,7 +13,7 @@ class FavoritesViewController: UIViewController {
     let favoriteView = FavoriteView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .blue
+        self.view.backgroundColor = .green
         self.view.addSubview(favoriteView)
     }
     

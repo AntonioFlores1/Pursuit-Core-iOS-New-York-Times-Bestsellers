@@ -9,7 +9,7 @@
 import Foundation
 
 struct AllCategory: Codable {
-    let results: [Category]?
+    let results: [Category]
 }
 
 struct Category: Codable {

@@ -22,8 +22,6 @@ class FavoriteView: UIView {
         return Collection
     }()
     
-   
-    
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
         addSubview(CollectionView)
@@ -46,7 +44,6 @@ class FavoriteView: UIView {
             ])
     }
 }
-
 extension FavoriteView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 9

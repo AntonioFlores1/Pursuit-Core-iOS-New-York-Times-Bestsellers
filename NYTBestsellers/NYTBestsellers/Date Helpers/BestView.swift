@@ -10,17 +10,6 @@ import UIKit
 
 class BestView: UIView {
 
-
-
-    
-//var something = []()
-    
-    
-    
-    
-    
-  
-    
     lazy var myCollection: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize.init(width: 300, height: 340)
@@ -65,6 +54,7 @@ myPicker.topAnchor.constraint(equalTo: myCollection.bottomAnchor, constant:0).is
 myPicker.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1).isActive = true
 myPicker.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
+    
 }
 
 

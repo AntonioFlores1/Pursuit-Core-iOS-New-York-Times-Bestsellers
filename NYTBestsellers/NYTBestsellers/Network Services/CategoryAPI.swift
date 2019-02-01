@@ -25,10 +25,8 @@ NetworkHelper.shared.performDataTask(endpointURLString:category, httpMethod: "GE
                 do {
                     let myCate = try JSONDecoder().decode(AllCategory.self, from: data)
                     completionHandler(nil,myCate.results)
-                    print("again")
                 } catch {
                     completionHandler(AppError.jsonDecodingError(error),nil)
-                    print("again2")
                 }
             }
         }

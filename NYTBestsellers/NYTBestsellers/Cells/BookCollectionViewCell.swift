@@ -10,8 +10,6 @@ import UIKit
 
 class BookCollectionViewCell: UICollectionViewCell {
     
-    
-    
     lazy var myImage: UIImageView = {
         let image = UIImageView()
         image.image = UIImage.init(named: "placeholder-image-2")
@@ -40,7 +38,6 @@ class BookCollectionViewCell: UICollectionViewCell {
         SetUp()
     }
     
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -49,6 +46,7 @@ class BookCollectionViewCell: UICollectionViewCell {
         addSubview(myImage)
         addSubview(myLabel)
         addSubview(mytext)
+        
 myImage.translatesAutoresizingMaskIntoConstraints = false
 myImage.topAnchor.constraint(equalTo:safeAreaLayoutGuide.topAnchor,constant: 0).isActive = true
 myImage.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.7).isActive = true
